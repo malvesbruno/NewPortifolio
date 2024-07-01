@@ -16,6 +16,8 @@ import Menu_btn from './menu';
 import useMediaQuery from './media-query';
 import MenuOpen from './menu_open';
 
+import packageJson from '../package.json';
+
 let roles = [
   'Desenvolvedor Full-Stack',
   'Freelancer',
@@ -69,7 +71,7 @@ function App() {
   }
 
   return (
-    <Router basename="/repository-name">
+    <Router basename={packageJson.homepage}>
       <div className="App">
         <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
         <header className="App-header">
