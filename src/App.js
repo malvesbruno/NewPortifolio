@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import profile from './static/profile-img.jpg';
-
-
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import Watch_picture from './watcher';
 import Watch_Info from './watch_info';
-import { useRef } from 'react';
 import Watch_Skill from './watch_skills';
 import Watch_Ex from './watch_experience';
 import Watch_Port from './watch_port';
@@ -33,8 +30,6 @@ let roles_en = [
   'Passionate about programming'
 ];
 
-
-
 function App() {
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
@@ -46,8 +41,10 @@ function App() {
 
   const [isClicked, setIsClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
-
   const [isEnglish, setEnglish] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const isSmallScreen = useMediaQuery('(max-width: 769px)')
 
   const handleEnglish = () => {
     setEnglish(!isEnglish)
@@ -64,195 +61,99 @@ function App() {
     if (isSmallScreen){
       scrollToRef(PortDetailRef)
     }
-
   };
 
-  
-
-  const isSmallScreen = useMediaQuery('(max-width: 769px)')
-
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const handleMenuOpen = () =>{
+  const handleMenuOpen = () => {
     setMenuOpen(!isMenuOpen)
     console.log(isMenuOpen)
   }
 
-  if (!isEnglish){
   return (
-    <div className="App">
-      <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
-      <header className="App-header">
-        <aside className='menu'>
-          <img src={profile} className='profile_picture' alt="profile" />
-          <p>Bruno Massuete Alves</p>
-          <div className='list-buttons'>
-            <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
-            <button><a href='https://github.com/malvesbruno'><span className="github"></span></a></button>
-            <button><a href='https://join.skype.com/invite/nYTYmlHRxFRE'><span className="skype"></span></a></button>
-            <button><a href='https://www.linkedin.com/in/bruno-massuete-7a91b3234/'><span className="linkedin"></span></a></button>
-            <button><a href='https://malvesbruno.github.io/Curriculum/'><span className='curriculum'></span></a></button>
-          </div>
-        <div className='menu-items'>
-          <ul>
-            <li onClick={() => scrollToRef(homeRef)} id='home_btn'><a><span className='home'></span>Início</a></li>
-            <li onClick={() => scrollToRef(aboutRef)} id='about_btn'><a><span className='person'></span>Sobre</a></li>
-            <li onClick={() => scrollToRef(resumeRef)} id='resume_btn'><a><span className='paper'></span>Currículo</a></li>
-            <li onClick={() => scrollToRef(portiRef)} id='porti_btn'><a><span className='book'></span>Portifólio</a></li>
-            <li onClick={() => scrollToRef(contactRef)} id='contact_btn'><a><span className='envelope'></span>Contato</a></li>
-          </ul>
-        </div>
-        <footer>
-          <p>En</p>
-          <label className='switch'>
-            <input type='checkbox' onClick={handleEnglish}></input>
-            <span class="slider round">
-            </span>
-          </label>
-          <p>Pt</p>
-        </footer>
-        </aside>
-        <MenuOpen isEnglish={isEnglish} isMenuOpen={isMenuOpen} scrollToRef={scrollToRef}
-        handleEnglish={handleEnglish} homeRef={homeRef} resumeRef={resumeRef} aboutRef={aboutRef}
-        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen}></MenuOpen>
-        <div ref={homeRef}>
-          < Watch_Home isEnglish={isEnglish} roles={roles}></Watch_Home>
-        </div>
-      </header>
-      <header className='App-header'>
-      <aside className='page'>
-        <h1 className='title_page' id='about' ref={aboutRef}>Sobre</h1>
-          <div className='about'>
-          <p>Sou freelancer, atualmente estudando Ciência da Computação.<br></br> Estou procurando uma oportunidade para fazer parte de uma equipe e aprender mais com ela.</p>
-          <div className='screen'>
-            <Watch_picture />
-            <Watch_Info isEnglish={isEnglish} />
-          </div>
-          </div>
-      </aside> 
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-        <h1 className='title_page' id='skill' ref={skillsRef}>Habilidades</h1>
-          <div className='about'>
-            <Watch_Skill/>
-          </div>
-        </aside>
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-          <h1 className='title_page' id="resume" ref={resumeRef}>Currículo</h1>
-          <div className='about'>
-            <Watch_Ex />
+    <Router basename="/repository-name">
+      <div className="App">
+        <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
+        <header className="App-header">
+          <aside className='menu'>
+            <img src={profile} className='profile_picture' alt="profile" />
+            <p>Bruno Massuete Alves</p>
+            <div className='list-buttons'>
+              <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
+              <button><a href='https://github.com/malvesbruno'><span className="github"></span></a></button>
+              <button><a href='https://join.skype.com/invite/nYTYmlHRxFRE'><span className="skype"></span></a></button>
+              <button><a href='https://www.linkedin.com/in/bruno-massuete-7a91b3234/'><span className="linkedin"></span></a></button>
+              <button><a href='https://malvesbruno.github.io/Curriculum/'><span className='curriculum'></span></a></button>
             </div>
-        </aside>
-      </header>
-      <header className='App-header'>
-        <div ref={PortDetailRef} className='fullscreen'>
-        {clickedIndex !== null && <Portfolio_details index={clickedIndex} isclicked={isClicked} onButtonClicked={handleItemClick}/>}
-        </div>
-        <aside className='page_port'>
-        <h1 className='title_page' id="port" ref={portiRef}>Portifólio</h1>
-        <Watch_Port onItemClicked={handleItemClick} />
-        </aside>
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-        <h1 className='title_page' id='contact' ref={contactRef}>Contato</h1>
-        <Watch_contact></Watch_contact>
-        </aside>
-      </header>
-    </div>
-    
-  );
-} else {
-  return (
-    <div className="App">
-      <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
-      <header className="App-header">
-        <aside className='menu'>
-          <img src={profile} className='profile_picture' alt="profile" />
-          <p>Bruno Massuete Alves</p>
-          <div className='list-buttons'>
-            <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
-            <button><a href='https://github.com/malvesbruno'><span className="github"></span></a></button>
-            <button><a href='https://join.skype.com/invite/nYTYmlHRxFRE'><span className="skype"></span></a></button>
-            <button><a href='https://www.linkedin.com/in/bruno-massuete-7a91b3234/'><span className="linkedin"></span></a></button>
-            <button><a href='https://malvesbruno.github.io/Curriculum/'><span className='curriculum'></span></a></button>
-          </div>
-        <div className='menu-items'>
-          <ul>
-            <li onClick={() => scrollToRef(homeRef)} id='home_btn'><a><span className='home'></span>Home</a></li>
-            <li onClick={() => scrollToRef(aboutRef)} id='about_btn'><a><span className='person'></span>About</a></li>
-            <li onClick={() => scrollToRef(resumeRef)} id='resume_btn'><a><span className='paper'></span>Resume</a></li>
-            <li onClick={() => scrollToRef(portiRef)} id='porti_btn'><a><span className='book'></span>Portfolio</a></li>
-            <li onClick={() => scrollToRef(contactRef)} id='contact_btn'><a><span className='envelope'></span>Contact</a></li>
-          </ul>
-        </div>
-        <footer>
-          <p>En</p>
-          <label className='switch'>
-            <input type='checkbox' onClick={handleEnglish}></input>
-            <span class="slider round">
-            </span>
-          </label>
-          <p>Pt</p>
-        </footer>
-        </aside>
-        <MenuOpen isEnglish={isEnglish} isMenuOpen={isMenuOpen} scrollToRef={scrollToRef}
-        handleEnglish={handleEnglish} homeRef={homeRef} resumeRef={resumeRef} aboutRef={aboutRef}
-        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen}></MenuOpen>
-        <div ref={homeRef}>
-          < Watch_Home isEnglish={isEnglish} roles={roles_en}></Watch_Home>
-        </div>
-      </header>
-      <header className='App-header'>
-      <aside className='page'>
-        <h1 className='title_page' id='about' ref={aboutRef}>About</h1>
-          <div className='about'>
-          <p>I'm a freelancer, currently studying Computer Science.<br></br> I'm looking for an opportunity to be part of a team and learn more from it.</p>
-          <div className='screen'>
-            <Watch_picture />
-            <Watch_Info isEnglish={isEnglish}/>
-          </div>
-          </div>
-      </aside> 
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-        <h1 className='title_page' id='skill' ref={skillsRef}>Skills</h1>
-          <div className='about'>
-            <Watch_Skill/>
-          </div>
-        </aside>
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-          <h1 className='title_page' id="resume" ref={resumeRef}>Resume</h1>
-          <div className='about'>
-            <Watch_Ex isEnglish={isEnglish} />
+            <div className='menu-items'>
+              <ul>
+                <li><Link to="/home"><span className='home'></span>{isEnglish ? 'Home' : 'Início'}</Link></li>
+                <li><Link to="/about"><span className='person'></span>{isEnglish ? 'About' : 'Sobre'}</Link></li>
+                <li><Link to="/resume"><span className='paper'></span>{isEnglish ? 'Resume' : 'Currículo'}</Link></li>
+                <li><Link to="/portfolio"><span className='book'></span>{isEnglish ? 'Portfolio' : 'Portifólio'}</Link></li>
+                <li><Link to="/contact"><span className='envelope'></span>{isEnglish ? 'Contact' : 'Contato'}</Link></li>
+              </ul>
             </div>
-        </aside>
-      </header>
-      <header className='App-header'>
-      <div ref={PortDetailRef} className='fullscreen'>
-        {clickedIndex !== null && <Portfolio_details index={clickedIndex} isclicked={isClicked} onButtonClicked={handleItemClick}/>}
-        </div>
-        <aside className='page_port'>
-        <h1 className='title_page' id="port" ref={portiRef}>Portfolio</h1>
-        <Watch_Port onItemClicked={handleItemClick} />
-        </aside>
-      </header>
-      <header className='App-header'>
-        <aside className='page'>
-        <h1 className='title_page' id='contact' ref={contactRef}>Contact</h1>
-        <Watch_contact isEnglish={isEnglish}></Watch_contact>
-        </aside>
-      </header>
-    </div>
-    
+            <footer>
+              <p>En</p>
+              <label className='switch'>
+                <input type='checkbox' onClick={handleEnglish}></input>
+                <span className="slider round"></span>
+              </label>
+              <p>Pt</p>
+            </footer>
+          </aside>
+          <MenuOpen isEnglish={isEnglish} isMenuOpen={isMenuOpen} scrollToRef={scrollToRef}
+            handleEnglish={handleEnglish} homeRef={homeRef} resumeRef={resumeRef} aboutRef={aboutRef}
+            portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen}></MenuOpen>
+        </header>
+
+        <Routes>
+          <Route path="/" element={<Watch_Home isEnglish={isEnglish} roles={isEnglish ? roles_en : roles} />} />
+          <Route path="/home" element={<Watch_Home isEnglish={isEnglish} roles={isEnglish ? roles_en : roles} />} />
+          <Route path="/about" element={
+            <aside className='page'>
+              <h1 className='title_page' ref={aboutRef}>{isEnglish ? 'About' : 'Sobre'}</h1>
+              <div className='about'>
+                <p>{isEnglish ? 'I\'m a freelancer, currently studying Computer Science. I\'m looking for an opportunity to be part of a team and learn more from it.' : 'Sou freelancer, atualmente estudando Ciência da Computação. Estou procurando uma oportunidade para fazer parte de uma equipe e aprender mais com ela.'}</p>
+                <div className='screen'>
+                  <Watch_picture />
+                  <Watch_Info isEnglish={isEnglish} />
+                </div>
+              </div>
+            </aside>
+          } />
+          <Route path="/resume" element={
+            <aside className='page'>
+              <h1 className='title_page' ref={resumeRef}>{isEnglish ? 'Resume' : 'Currículo'}</h1>
+              <div className='about'>
+                <Watch_Ex isEnglish={isEnglish} />
+              </div>
+            </aside>
+          } />
+          <Route path="/skills" element={
+            <aside className='page'>
+              <h1 className='title_page' ref={skillsRef}>{isEnglish ? 'Skills' : 'Habilidades'}</h1>
+              <div className='about'>
+                <Watch_Skill />
+              </div>
+            </aside>
+          } />
+          <Route path="/portfolio" element={
+            <aside className='page'>
+              <h1 className='title_page' ref={portiRef}>{isEnglish ? 'Portfolio' : 'Portifólio'}</h1>
+              <Watch_Port onItemClicked={handleItemClick} />
+              {clickedIndex !== null && <Portfolio_details index={clickedIndex} isclicked={isClicked} onButtonClicked={handleItemClick} />}
+            </aside>
+          } />
+          <Route path="/contact" element={
+            <aside className='page'>
+              <h1 className='title_page' ref={contactRef}>{isEnglish ? 'Contact' : 'Contato'}</h1>
+              <Watch_contact isEnglish={isEnglish} />
+            </aside>
+          } />
+        </Routes>
+      </div>
+    </Router>
   );
-}
 }
 
 export default App;
