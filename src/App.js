@@ -19,6 +19,9 @@ import Menu_btn from './menu';
 import useMediaQuery from './media-query';
 import MenuOpen from './menu_open';
 
+import { HashRouter as Router } from 'react-router-dom';
+
+
 let roles = [
   'Desenvolvedor Full-Stack',
   'Freelancer',
@@ -80,6 +83,7 @@ function App() {
 
   if (!isEnglish){
   return (
+    <Router>
     <div className="App">
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
@@ -163,10 +167,11 @@ function App() {
         </aside>
       </header>
     </div>
-    
+    </Router>
   );
 } else {
   return (
+    <Router>
     <div className="App">
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
@@ -250,7 +255,7 @@ function App() {
         </aside>
       </header>
     </div>
-    
+    </Router>
   );
 }
 }
