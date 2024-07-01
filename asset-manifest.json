@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/malvesbruno/NewPortifolio/static/css/main.83e26508.css",
-    "main.js": "/malvesbruno/NewPortifolio/static/js/main.db103f98.js",
+    "main.js": "/malvesbruno/NewPortifolio/static/js/main.214702ff.js",
     "static/js/453.5565870f.chunk.js": "/malvesbruno/NewPortifolio/static/js/453.5565870f.chunk.js",
     "static/media/Pull-it Train.zip": "/malvesbruno/NewPortifolio/static/media/Pull-it Train.cbc41eb439f3e290556a.zip",
     "static/media/app-vendas.zip": "/malvesbruno/NewPortifolio/static/media/app-vendas.6ce4021c73eb270ac944.zip",
@@ -31,11 +31,11 @@
     "static/media/portfolio-6.png": "/malvesbruno/NewPortifolio/static/media/portfolio-6.551aa46cc53425d673ee.png",
     "index.html": "/malvesbruno/NewPortifolio/index.html",
     "main.83e26508.css.map": "/malvesbruno/NewPortifolio/static/css/main.83e26508.css.map",
-    "main.db103f98.js.map": "/malvesbruno/NewPortifolio/static/js/main.db103f98.js.map",
+    "main.214702ff.js.map": "/malvesbruno/NewPortifolio/static/js/main.214702ff.js.map",
     "453.5565870f.chunk.js.map": "/malvesbruno/NewPortifolio/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83e26508.css",
-    "static/js/main.db103f98.js"
+    "static/js/main.214702ff.js"
   ]
 }
