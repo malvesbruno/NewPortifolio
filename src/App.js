@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import profile from './static/profile-img.jpg';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import packageJson from '../package.json';
 
 import Watch_picture from './watcher';
 import Watch_Info from './watch_info';
@@ -15,8 +16,6 @@ import Watch_Home from './watch_home';
 import Menu_btn from './menu';
 import useMediaQuery from './media-query';
 import MenuOpen from './menu_open';
-
-import packageJson from '../package.json';
 
 let roles = [
   'Desenvolvedor Full-Stack',
@@ -33,25 +32,25 @@ let roles_en = [
 ];
 
 function App() {
-  const homeRef = useRef(null)
-  const aboutRef = useRef(null)
-  const skillsRef = useRef(null)
-  const resumeRef = useRef(null)
-  const portiRef = useRef(null)
-  const contactRef = useRef(null)
-  const PortDetailRef = useRef(null)
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const resumeRef = useRef(null);
+  const portiRef = useRef(null);
+  const contactRef = useRef(null);
+  const PortDetailRef = useRef(null);
 
   const [isClicked, setIsClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
   const [isEnglish, setEnglish] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const isSmallScreen = useMediaQuery('(max-width: 769px)')
+  const isSmallScreen = useMediaQuery('(max-width: 769px)');
 
   const handleEnglish = () => {
-    setEnglish(!isEnglish)
-    console.log(isEnglish)
-  }
+    setEnglish(!isEnglish);
+    console.log(isEnglish);
+  };
 
   const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -60,18 +59,18 @@ function App() {
   const handleItemClick = (index) => {
     setIsClicked(!isClicked);
     setClickedIndex(index);
-    if (isSmallScreen){
-      scrollToRef(PortDetailRef)
+    if (isSmallScreen) {
+      scrollToRef(PortDetailRef);
     }
   };
 
   const handleMenuOpen = () => {
-    setMenuOpen(!isMenuOpen)
-    console.log(isMenuOpen)
-  }
+    setMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
+  };
 
   return (
-    <Router basename={packageJson.homepage}>
+    <Router basename={new URL(packageJson.homepage).pathname}>
       <div className="App">
         <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
         <header className="App-header">
@@ -87,7 +86,7 @@ function App() {
             </div>
             <div className='menu-items'>
               <ul>
-                <li><Link to="/home"><span className='home'></span>{isEnglish ? 'Home' : 'Início'}</Link></li>
+                <li><Link to="/"><span className='home'></span>{isEnglish ? 'Home' : 'Início'}</Link></li>
                 <li><Link to="/about"><span className='person'></span>{isEnglish ? 'About' : 'Sobre'}</Link></li>
                 <li><Link to="/resume"><span className='paper'></span>{isEnglish ? 'Resume' : 'Currículo'}</Link></li>
                 <li><Link to="/portfolio"><span className='book'></span>{isEnglish ? 'Portfolio' : 'Portifólio'}</Link></li>
@@ -110,7 +109,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Watch_Home isEnglish={isEnglish} roles={isEnglish ? roles_en : roles} />} />
-          <Route path="/home" element={<Watch_Home isEnglish={isEnglish} roles={isEnglish ? roles_en : roles} />} />
           <Route path="/about" element={
             <aside className='page'>
               <h1 className='title_page' ref={aboutRef}>{isEnglish ? 'About' : 'Sobre'}</h1>
