@@ -39,7 +39,7 @@ const Watch_Ex = ({isEnglish}) => {
     <>
     <div className='resumo ex_to_move'>
             <p>
-            Sou um freelancer com 1 ano de experiência, atualmente estudando Ciência da Computação. Com conhecimento em linguagens como C#, CSS, Python, Java, Javascript, SQL, Html. Desenvolvi alguns projetos como os mostrados abaixo. Estou em busca de uma oportunidade para crescer na área e aprender mais sobre ela.
+            Sou um freelancer com 1 ano de experiência, atualmente estudando Ciência da Computação. Com conhecimento em linguagens como C#, CSS, Python, Java, Javascript, SQL, Html. Desenvolvi alguns projetos como Jogos, Apps, Programas, RPA, Web Scraping, Aprendizado de Máquina, APIS, Análise de dados e projetos front-end.
             </p>
             <div className='info-resumo'>
               <div className='education_side'>
@@ -85,7 +85,7 @@ const Watch_Ex = ({isEnglish}) => {
     <>
     <div className='resumo ex_to_move'>
             <p>
-            I'm a freelancer with 1 year of experience, currently studying Computer Science. With knowledge of languages such as C#, CSS, Python, Java, Javascript, SQL, Html. I developed some projects like the ones shown below. I'm looking for a chance to grow in the area and learn more about it.
+            I'm a freelancer with 1 year of experience, currently studying Computer Science. With knowledge of languages ​​such as C#, CSS, Python, Java, Javascript, SQL, Html. I developed some projects such as Games, Apps, Programs, RPA, Web Scraping, Machine Learning, APIS, Data Analysis and front-end projects.
             </p>
             <div className='info-resumo'>
               <div className='education_side'>
