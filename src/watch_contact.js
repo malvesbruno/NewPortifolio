@@ -45,7 +45,7 @@ const Watch_contact = ({isEnglish}) => {
               <div className='icon'><span className='map-pin'></span></div>
               <h1> Localização: </h1>
             </div>
-            <p>Guarulhos, São Paulo, SP</p>
+            <p>Guarulhos, São Paulo</p>
             <div className='info'>
               <div className='icon'><span className='email'></span></div>
               <h1> Email: </h1>
@@ -74,7 +74,7 @@ const Watch_contact = ({isEnglish}) => {
               <div className='icon'><span className='map-pin'></span></div>
               <h1> Location: </h1>
             </div>
-            <p>Guarulhos, São Paulo, SP</p>
+            <p>Guarulhos, São Paulo</p>
             <div className='info'>
               <div className='icon'><span className='email'></span></div>
               <h1> Email: </h1>

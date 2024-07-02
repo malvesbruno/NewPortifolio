@@ -1465,6 +1465,10 @@ div.portifolio > img:hover{
     overflow: hidden;
   }
 
+  div.menu_way {
+    height: 800%;
+}
+
   div.background{
     box-shadow: none;
   }
@@ -1730,6 +1734,11 @@ div.portifolio > img:hover{
     overflow: hidden;
   }
 
+  div.menu_way {
+    height: 850%;
+}
+
+
   aside.menu_open > .menu-items{
     font-size: 1.2em;
   }
@@ -1994,6 +2003,10 @@ div.portifolio > img:hover{
   .home{
     overflow: hidden;
   }
+
+  div.menu_way {
+    height: 900%;
+}
 
   aside.menu_open > .menu-items{
     font-size: 1.2em;
@@ -2266,6 +2279,10 @@ div.portifolio > img:hover{
   .home{
     overflow: hidden;
   }
+
+  div.menu_way {
+    height: 700%;
+}
 
   aside.menu_open > .menu-items{
     font-size: 1.2em;
