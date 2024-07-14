@@ -64,6 +64,7 @@ import pull_itTrainfile from './files/Pull-it Train.zip'
 import fooFighterfile from './files/foo fighter.zip'
 import ImageCarousel from "./carrosel";
 
+
 const image1 = [
   portifolio1_1,
   portifolio1_2,

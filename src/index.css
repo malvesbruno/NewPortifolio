@@ -1351,8 +1351,8 @@ div.portifolio {
   width: 95%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 400px; /* Adjust this value as needed */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows:max-content; /* Adjust this value as needed */
   grid-auto-flow: dense; /* Fills in gaps in the grid */
   padding: 0.5em;
   margin: 0.5em;
@@ -1360,6 +1360,63 @@ div.portifolio {
   border-radius: 20px;
   backdrop-filter: blur(1px);
   gap: 0.5em; /* Adjust the gap between items */
+}
+
+div.portifolio > div.item{
+  width: 100%;
+  height: 100%;
+}
+
+div.portifolio > div.item > img{
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+div.portifolio > div.item > div{
+  justify-self: center;
+  align-self: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+div.portifolio > div.item > a{
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.portifolio > div.item > a > h1{
+  margin-block: 0.3em;
+  font-size: 1em;
+}
+
+div.portifolio > div.item > a > h1:hover{
+  font-size: 1.5em;
+}
+
+div.portifolio > div.item > p{
+  font-size: 0.6em;
+}
+
+div.portifolio > div.item > a > h3{
+  margin-block: 0.3em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  color: #606ed9d2;
+}
+
+div.portifolio > div.item > a > h3:hover{
+  font-size: 1em;
+}
+
+div.portifolio > div.item > div > div > img.project_Icon{
+  color: white;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7486%) hue-rotate(234deg) brightness(107%) contrast(101%);
+  height: auto;
+  max-width: 80%;
 }
 
 
@@ -1620,9 +1677,30 @@ div.portifolio > img:hover{
   div.portifolio {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 1em;
+    gap: 4em;
+  }
+
+  div.portifolio > div.item > div > div > img.project_Icon{
+    height: 60%;
   }
   
+  div.portifolio > div.item > a > h1{
+    font-size: 1.5em;
+  }
+
+  div.portifolio > div.item > a > h1:hover{
+    font-size: 1.5em;
+  }
+
+
+  div.portifolio > div.item > a > h3{
+    font-size: 1.4em;
+  }
+
+  div.portifolio > div.item > a > h3:hover{
+    font-size: 1.4em;
+  }
+
 
   div.about_contact{
     justify-self: center;
@@ -1891,7 +1969,28 @@ div.portifolio > img:hover{
   div.portifolio {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 1em;
+    gap: 4em;
+  }
+
+  div.portifolio > div.item > div > div > img.project_Icon{
+    height: 60%;
+  }
+  
+  div.portifolio > div.item > a > h1{
+    font-size: 1.5em;
+  }
+
+  div.portifolio > div.item > a > h1:hover{
+    font-size: 1.5em;
+  }
+
+
+  div.portifolio > div.item > a > h3{
+    font-size: 1.4em;
+  }
+
+  div.portifolio > div.item > a > h3:hover{
+    font-size: 1.4em;
   }
   
 
@@ -2160,7 +2259,28 @@ div.portifolio > img:hover{
   div.portifolio {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    gap: 1em;
+    gap: 4em;
+  }
+
+  div.portifolio > div.item > div > div > img.project_Icon{
+    height: 60%;
+  }
+  
+  div.portifolio > div.item > a > h1{
+    font-size: 1.5em;
+  }
+
+  div.portifolio > div.item > a > h1:hover{
+    font-size: 1.5em;
+  }
+
+
+  div.portifolio > div.item > a > h3{
+    font-size: 1.4em;
+  }
+
+  div.portifolio > div.item > a > h3:hover{
+    font-size: 1.4em;
   }
   
 
@@ -2487,6 +2607,31 @@ div.portifolio > img:hover{
 
   div.about_contact > div.sides > div.side2{
     width: 50%;
+  }
+
+  div.portifolio {
+    gap: 2.5em;
+  }
+
+  div.portifolio > div.item > div > div > img.project_Icon{
+    height: 60%;
+  }
+  
+  div.portifolio > div.item > a > h1{
+    font-size: 1.5em;
+  }
+
+  div.portifolio > div.item > a > h1:hover{
+    font-size: 1.5em;
+  }
+
+
+  div.portifolio > div.item > a > h3{
+    font-size: 1.4em;
+  }
+
+  div.portifolio > div.item > a > h3:hover{
+    font-size: 1.4em;
   }
 
   

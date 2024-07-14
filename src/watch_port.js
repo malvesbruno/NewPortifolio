@@ -1,15 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import portifolio1 from'./static/portifolio/portfolio-1.png'
-import portifolio2 from'./static/portifolio/portfolio-2.png'
-import portifolio3 from'./static/portifolio/portfolio-3.png'
-import portifolio4 from'./static/portifolio/portfolio-4.png'
-import portifolio5 from'./static/portifolio/portfolio-5.png'
-import portifolio6 from'./static/portifolio/portfolio-6.png'
-import portifolio7 from'./static/portifolio/portfolio-7.png'
+
+import { useGitHubAutomatedRepos, ProjectIcons, StackIcons, StackLabels } from "github-automated-repos";
+
+
 
 const Watch_Port = ({ onItemClicked }) => {
   const elementsRef = useRef([]);
 
+  const data = useGitHubAutomatedRepos('malvesbruno', 'portfolio')
+  console.log(data)
   useEffect(() => {
     // Get all elements with a certain class name
     const elements = document.getElementsByClassName('port_to_move');
@@ -44,19 +43,70 @@ const Watch_Port = ({ onItemClicked }) => {
 
   return (
     <>
-    <div className='portifolio port_to_move'>
-            <img src={portifolio1} onClick={() => onItemClicked(1)} ></img>
-            <img src={portifolio4} onClick={() => onItemClicked(2)}></img>
-            <img src={portifolio5} onClick={() => onItemClicked(3)}></img>
-            <img src={portifolio3} onClick={() => onItemClicked(4)}></img>
-            <img src={portifolio6} onClick={() => onItemClicked(5)}></img>
-            <img src={portifolio7} onClick={() => onItemClicked(6)}></img>
-            <img src={portifolio2} onClick={() => onItemClicked(7)}></img>
+      {
+        data.map((item) => {
+          return (
+            <div key={item.id} className='item' alt={"banner " + item.name}>
 
-            
-          </div>      
-            </>
+              {/*Banner / Layout / Logo*/}
+              <img src={item.banner}></img>
+
+              {/*Project Icons*/}
+              <div style={{display: 'flex', flexDirection:'row', justifyContent: 'space-evenly'}}>
+              {item.topics.map((icon) => {
+                let names = ['art', 'artificialintelligence', 'dashboard', 'education', 'game', 'landingpage', 'personalwebsite', 'productivity', 'security', 'store']
+                if (names.includes(icon)){
+                return (
+                  <ProjectIcons key={icon} className="project_Icon" itemTopics={icon} />
+                )
+              } else {
+                return (
+                <></>
+                )
+              }
+              })}
+              </div>
+
+              {/*html Url*/}
+              <a href={item.html_url}>
+                  {/*Name Project*/}
+                  <h1>{item.name}</h1>
+              </a>
+
+              {/*Description*/}
+              <p>{item.description}</p>
+  
+              {/*Homepage*/}
+              
+              <a href={item.homepage}>
+                  <h3>Link</h3>
+              </a>
+              <div style={{display:"flex", flexDirection: "row", justifyContent:'space-evenly'}}>
+              {/*Stacks Icon and Stacks Label*/}
+              {item.topics.map((icon, index) => {
+                let names = ['art', 'artificialintelligence', 'dashboard', 'education', 'game', 'landingpage', 'personalwebsite', 'productivity', 'security', 'store']
+                if (!names.includes(icon) && icon !== 'portfolio'){
+                return (
+                   <div key={icon} style={{display:'flex', justifyContent:'center', }}>
+                    <StackIcons key={icon} className="stack_Icon" itemTopics={icon} />
+                    </div>
+                )
+              } else {
+                return (
+                <></>
+                )
+              }
+              })}
+              </div>
+
+            </div>
+
+          )
+        })
+      }
+    </>
   );
-};
+
+}
 
 export default Watch_Port;

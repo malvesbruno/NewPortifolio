@@ -110,7 +110,7 @@ function App() {
           <p>En</p>
           <label className='switch'>
             <input type='checkbox' onClick={handleEnglish}></input>
-            <span class="slider round">
+            <span className="slider round">
             </span>
           </label>
           <p>Pt</p>
@@ -157,7 +157,9 @@ function App() {
         </div>
         <aside className='page_port'>
         <h1 className='title_page' id="port" ref={portiRef}>Portifólio</h1>
-        <Watch_Port onItemClicked={handleItemClick} />
+        <div className='portifolio port_to_move'>
+          <Watch_Port onItemClicked={handleItemClick} />
+        </div>
         </aside>
       </header>
       <header className='App-header'>
@@ -198,7 +200,7 @@ function App() {
           <p>En</p>
           <label className='switch'>
             <input type='checkbox' onClick={handleEnglish}></input>
-            <span class="slider round">
+            <span className="slider round">
             </span>
           </label>
           <p>Pt</p>
@@ -245,7 +247,9 @@ function App() {
         </div>
         <aside className='page_port'>
         <h1 className='title_page' id="port" ref={portiRef}>Portfolio</h1>
-        <Watch_Port onItemClicked={handleItemClick} />
+        <div className='portifolio port_to_move'>
+          <Watch_Port onItemClicked={handleItemClick} />
+        </div>
         </aside>
       </header>
       <header className='App-header'>
