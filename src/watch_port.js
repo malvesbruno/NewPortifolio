@@ -46,6 +46,7 @@ const Watch_Port = ({ onItemClicked }) => {
       {
         data.map((item) => {
           return (
+            <div className='spacegetter'>
             <div key={item.id} className='item' alt={"banner " + item.name}>
 
               {/*Banner / Layout / Logo*/}
@@ -104,7 +105,7 @@ const Watch_Port = ({ onItemClicked }) => {
               </div>
 
             </div>
-
+            </div>
           )
         })
       }
