@@ -49,10 +49,11 @@ const Watch_Port = ({ onItemClicked }) => {
             <div key={item.id} className='item' alt={"banner " + item.name}>
 
               {/*Banner / Layout / Logo*/}
-              <img src={item.banner}></img>
 
               {/*Project Icons*/}
-              <div style={{display: 'flex', flexDirection:'row', justifyContent: 'space-evenly'}}>
+              <div className="icons">
+              <img src={item.banner} className='img_port'></img>
+              <div className='type_display'>
               {item.topics.map((icon) => {
                 let names = ['art', 'artificialintelligence', 'dashboard', 'education', 'game', 'landingpage', 'personalwebsite', 'productivity', 'security', 'store']
                 if (names.includes(icon)){
@@ -66,6 +67,7 @@ const Watch_Port = ({ onItemClicked }) => {
               }
               })}
               </div>
+              </div>
 
               {/*html Url*/}
               <a href={item.html_url}>
@@ -74,14 +76,16 @@ const Watch_Port = ({ onItemClicked }) => {
               </a>
 
               {/*Description*/}
-              <p>{item.description}</p>
+              <div className='description_display'>
+                <p>{item.description}</p>
+              </div>
   
               {/*Homepage*/}
               
-              <a href={item.homepage}>
-                  <h3>Link</h3>
+              <a href={item.homepage} className='link_btn'>
+                  <button>Link</button>
               </a>
-              <div style={{display:"flex", flexDirection: "row", justifyContent:'space-evenly'}}>
+              <div className='icon_display'>
               {/*Stacks Icon and Stacks Label*/}
               {item.topics.map((icon, index) => {
                 let names = ['art', 'artificialintelligence', 'dashboard', 'education', 'game', 'landingpage', 'personalwebsite', 'productivity', 'security', 'store']

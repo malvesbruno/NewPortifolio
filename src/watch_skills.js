@@ -52,17 +52,24 @@ const Watch_Skill = () => {
                   </div>
                   <div className='progress'>
                     <div className='title'>
-                      <h1>C#</h1>
-                      <h1>65%</h1>
-                    </div>
-                    <progress className='progressbar' value="60" max="100"> 65% </progress>
-                  </div>
-                  <div className='progress'>
-                    <div className='title'>
                       <h1>Java-Script</h1>
                       <h1>80%</h1>
                     </div>
                     <progress className='progressbar' value="80" max="100"> 90% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>Type-Script</h1>
+                      <h1>80%</h1>
+                    </div>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>React.js</h1>
+                      <h1>80%</h1>
+                    </div>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
                   </div>
                   <div className='progress'>
                     <div className='title'>
@@ -71,9 +78,7 @@ const Watch_Skill = () => {
                     </div>
                     <progress className='progressbar' value="80" max="100"> 80% </progress>
                   </div>
-              </div>
-              <div className='sideB skill_to_move'>
-              <div className='progress'>
+                  <div className='progress'>
                   <div className='title'>
                       <h1>HTML</h1>
                       <h1>80%</h1>
@@ -89,24 +94,27 @@ const Watch_Skill = () => {
                   </div>
                   <div className='progress'>
                     <div className='title'>
-                      <h1>Type-Script</h1>
-                      <h1>80%</h1>
+                      <h1>C#</h1>
+                      <h1>65%</h1>
                     </div>
-                    <progress className='progressbar' value="80" max="100"> 80% </progress>
+                    <progress className='progressbar' value="65" max="100"> 65% </progress>
                   </div>
+                  
+
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>Security of End-Point</h1>
+                      <h1>50%</h1>
+                    </div>
+                    <progress className='progressbar' value="50" max="100"> 50% </progress>
+                  </div>
+                  
                   <div className='progress'>
                     <div className='title'>
                       <h1>UI/UX</h1>
                       <h1>60%</h1>
                     </div>
                     <progress className='progressbar' value="60" max="100"> 80% </progress>
-                  </div>
-                  <div className='progress'>
-                    <div className='title'>
-                      <h1>React.js</h1>
-                      <h1>40%</h1>
-                    </div>
-                    <progress className='progressbar' value="40" max="100"> 40% </progress>
                   </div>
               </div>
               
