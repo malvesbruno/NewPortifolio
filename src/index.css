@@ -1890,6 +1890,10 @@ div.icons{
   .popUp > div.info > div.side2 > div.info > .button_place{
     margin-top: 0em;
   }
+
+  div.progress{
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 376px) {
@@ -2180,6 +2184,10 @@ div.icons{
 
   .popUp > div.info > div.side2 > div.info > .button_place{
     margin-top: 0em;
+  }
+
+  div.progress{
+    width: 90%;
   }
 }
 
@@ -2477,6 +2485,10 @@ div.icons{
 
   .popUp > div.info > div.side2 > div.info > .button_place{
     margin-top: 0em;
+  }
+
+  div.progress{
+    width: 90%;
   }
 }
 
