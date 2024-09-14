@@ -21,8 +21,7 @@ body{
   background: url(./static/space-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  max-height: fit-content;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
