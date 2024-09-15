@@ -84,8 +84,8 @@ function App() {
   if (!isEnglish){
   return (
     <Router>
-      <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
     <div className="App">
+      <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
         <aside className='menu'>
           <img src={profile} className='profile_picture' alt="profile" />

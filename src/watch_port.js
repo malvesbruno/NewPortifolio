@@ -8,7 +8,6 @@ const Watch_Port = ({ onItemClicked }) => {
   const elementsRef = useRef([]);
 
   const data = useGitHubAutomatedRepos('malvesbruno', 'portfolio')
-  console.log(data)
   useEffect(() => {
     // Get all elements with a certain class name
     const elements = document.getElementsByClassName('port_to_move');

@@ -428,7 +428,7 @@ aside.menu_open{
   overflow-x: hidden;
   backdrop-filter: blur(1px);
   background-color: rgb(10, 10, 24);
-  z-index: 2;
+  z-index: 5;
   box-shadow: 0px 0px 10px rgba(20, 20, 51, 0.393);
 }
 
@@ -582,6 +582,7 @@ aside.menu_open > footer > label.switch > input{
   transition: .4s;
 }
 
+
 .slider:before {
   position: absolute;
   content: "";
@@ -593,6 +594,7 @@ aside.menu_open > footer > label.switch > input{
   -webkit-transition: .4s;
   transition: .4s;
 }
+
 
 
 input:checked + .slider {
