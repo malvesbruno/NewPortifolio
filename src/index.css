@@ -2550,6 +2550,7 @@ aside.page{
 
   aside.page > h1{
     margin-top: 0em;
+    z-index: 2;
   }  
 
   div.background > p.title{
