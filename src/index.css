@@ -564,6 +564,7 @@ aside.menu_open > footer > label.switch{
 }
 
 aside.menu_open > footer > label.switch > input{
+  position: relative;
   width: 100%;
   height: 100%;
   opacity: 0;
