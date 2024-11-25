@@ -1354,6 +1354,9 @@ div.about > div.resumo > div.info-resumo >div.education_side > div.education > u
   text-align: left;
   line-height: 2.3em;
   font-style: italic;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 div.about > div.resumo > div.info-resumo >div.education_side > div.education > p.italic{
