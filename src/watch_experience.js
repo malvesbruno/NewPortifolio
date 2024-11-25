@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import facul  from "./static/descomplica.png"
 
 const Watch_Ex = ({isEnglish}) => {
   const elementsRef = useRef([]);
@@ -49,8 +50,15 @@ const Watch_Ex = ({isEnglish}) => {
                     <div className='data'>
                       2024 - 2028
                     </div>
-                    <p className='italic'>Descomplica Faculdade Digital</p>
-                    <p>Bacharelado em Progresso</p>
+                    <ul>
+                      <li style={{textDecoration: "italic"}}>
+                        Descomplica Faculdade Digital
+                        <img src={facul} style={{height: "4em", marginLeft: "1em"}}></img>
+                      </li>
+                      <li>
+                        Bacharelado em Progresso
+                      </li>
+                    </ul>
                   </div>
               </div>
               <div className='education_side'>
@@ -95,8 +103,15 @@ const Watch_Ex = ({isEnglish}) => {
                     <div className='data'>
                       2024 - 2028
                     </div>
-                    <p className='italic'>Descomplica Faculdade Digital</p>
-                    <p>Bachelor's degree in progress</p>
+                    <ul>
+                      <li style={{textDecoration: "italic"}}>
+                      Descomplica Faculdade Digital
+                        <img src={facul} style={{height: "4em", marginLeft: "1em"}}></img>
+                      </li>
+                      <li>
+                      Bachelor's degree in progress
+                      </li>
+                    </ul>
                   </div>
               </div>
               <div className='education_side'>

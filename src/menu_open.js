@@ -1,5 +1,7 @@
 import React from "react";
 import profile from './static/profile-img.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglish, homeRef, aboutRef, resumeRef, portiRef, contactRef}) => {
 
@@ -13,7 +15,7 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
         return (
             <>
             <aside className='menu_open'>
-            <img src={profile} className='profile_picture' alt="profile" />
+            <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect="blur"/>
             <p>Bruno Massuete Alves</p>
             <div className='list-buttons'>
                 <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
@@ -33,11 +35,15 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
             </div>
             <footer>
             <p>En</p>
-            <label className='switch'>
+            {isEnglish? (<label className='switch'>
+                <input type='checkbox' onClick={handleEnglish} checked></input>
+                <span class="slider round">
+                </span>
+            </label>) : (<label className='switch'>
                 <input type='checkbox' onClick={handleEnglish}></input>
                 <span class="slider round">
                 </span>
-            </label>
+            </label>)}
             <p>Pt</p>
             </footer>
             </aside>
@@ -47,7 +53,7 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
     return(
         <>
             <aside className='menu_open'>
-            <img src={profile} className='profile_picture' alt="profile" />
+            <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect="blur" />
             <p>Bruno Massuete Alves</p>
             <div className='list-buttons'>
                 <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
@@ -67,11 +73,15 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
             </div>
             <footer>
             <p>En</p>
-            <label className='switch'>
+            {isEnglish? (<label className='switch'>
+                <input type='checkbox' onClick={handleEnglish} checked></input>
+                <span class="slider round">
+                </span>
+            </label>) : (<label className='switch'>
                 <input type='checkbox' onClick={handleEnglish}></input>
                 <span class="slider round">
                 </span>
-            </label>
+            </label>)}
             <p>Pt</p>
             </footer>
             </aside>

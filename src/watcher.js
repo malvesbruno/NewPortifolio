@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import profile from './static/profile-img.jpg';
 
+
 const Watch_picture = () => {
   const elementsRef = useRef([]);
 

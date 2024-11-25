@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { useState, useEffect } from 'react';
 import profile from './static/profile-img.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 
@@ -88,7 +89,7 @@ function App() {
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
         <aside className='menu'>
-          <img src={profile} className='profile_picture' alt="profile" />
+          <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect='blur' />
           <p>Bruno Massuete Alves</p>
           <div className='list-buttons'>
             <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>
@@ -178,7 +179,7 @@ function App() {
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
         <aside className='menu'>
-          <img src={profile} className='profile_picture' alt="profile" />
+          <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect='blur'/>
           <p>Bruno Massuete Alves</p>
           <div className='list-buttons'>
             <button><a href='https://wa.me/+5511968179509'><span className="whatsapp"></span></a></button>

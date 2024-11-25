@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import qrCode from './static/QRCODE.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 
 const Watch_contact = ({isEnglish}) => {
   const elementsRef = useRef([]);
@@ -58,7 +61,7 @@ const Watch_contact = ({isEnglish}) => {
             <p>+55 (11) 96817-9509</p>
             </div>
             <div className='side2'>
-                <img src={qrCode}></img>
+            <img src={qrCode}></img>
             </div>
             </div>
         </div>
@@ -87,7 +90,7 @@ const Watch_contact = ({isEnglish}) => {
             <p>+55 (11) 96817-9509</p>
             </div>
             <div className='side2'>
-                <img src={qrCode}></img>
+            <img src={qrCode}></img>
             </div>
             </div>
         </div>
