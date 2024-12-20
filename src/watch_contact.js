@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, lightOn} from 'react';
 import qrCode from './static/QRCODE.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+console.log(lightOn)
 
 
 
@@ -41,7 +42,7 @@ const Watch_contact = ({isEnglish}) => {
   if (!isEnglish){
   return (
     <>
-    <div className='about_contact contact_to_move'>
+    <div className={`about_contact contact_to_move ${lightOn?'light_mode':''}`}>
           <div className='sides'>
           <div className='side1'>
             <div className='info'>
@@ -70,7 +71,7 @@ const Watch_contact = ({isEnglish}) => {
 } else {
   return (
   <>
-    <div className='about_contact contact_to_move'>
+    <div className={`about_contact contact_to_move ${lightOn?'light_mode':''}`}>
           <div className='sides'>
           <div className='side1'>
             <div className='info'>

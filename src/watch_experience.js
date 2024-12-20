@@ -53,7 +53,7 @@ const Watch_Ex = ({isEnglish}) => {
                     <ul>
                       <li style={{textDecoration: "italic"}}>
                         Descomplica Faculdade Digital
-                        <img src={facul} style={{height: "4em", marginLeft: "1em"}}></img>
+                        <img src={facul} style={{height: "3em", marginLeft: "1em"}}></img>
                       </li>
                       <li>
                         Bacharelado em Progresso
@@ -106,7 +106,7 @@ const Watch_Ex = ({isEnglish}) => {
                     <ul>
                       <li style={{textDecoration: "italic"}}>
                       Descomplica Faculdade Digital
-                        <img src={facul} style={{height: "4em", marginLeft: "1em"}}></img>
+                        <img src={facul} style={{height: "3em", marginLeft: "1em"}}></img>
                       </li>
                       <li>
                       Bachelor's degree in progress

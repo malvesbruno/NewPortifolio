@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import TypingAnimation from './writter';
 
-const Watch_Home = ({isEnglish, roles}) => {
+const Watch_Home = ({isEnglish, roles, lightOn}) => {
   const elementsRef = useRef([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Watch_Home = ({isEnglish, roles}) => {
   return (
     <>
     <aside className='page'>
-          <div className='background' id="home">
+          <div className={`background ${lightOn ? 'light_mode' : ''}`} id="home">
             <p className='title'>Bruno Massuete Alves</p>
             <p className='animated'>
               Sou um <TypingAnimation 
@@ -55,7 +55,7 @@ const Watch_Home = ({isEnglish, roles}) => {
   return (
     <>
     <aside className='page'>
-          <div className='background' id="home">
+          <div className={`background ${lightOn ? 'light_mode' : ''}`} id="home">
             <p className='title'>Bruno Massuete Alves</p>
             <p className='animated'>
               I am a <TypingAnimation 

@@ -3,7 +3,7 @@ import profile from './static/profile-img.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
-const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglish, homeRef, aboutRef, resumeRef, portiRef, contactRef}) => {
+const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglish, homeRef, aboutRef, resumeRef, portiRef, contactRef, lightOn, handleLight}) => {
 
     const scroll_toRef = (ref) => {
         scrollToRef(ref);
@@ -14,7 +14,7 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
         if (!isEnglish){
         return (
             <>
-            <aside className='menu_open'>
+            <aside className={`menu_open ${lightOn?'light_mode': ''}`}>
             <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect="blur"/>
             <p>Bruno Massuete Alves</p>
             <div className='list-buttons'>
@@ -34,7 +34,6 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
             </ul>
             </div>
             <footer>
-            <p>En</p>
             {isEnglish? (<label className='switch'>
                 <input type='checkbox' onClick={handleEnglish} checked></input>
                 <span class="slider round">
@@ -44,7 +43,27 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
                 <span class="slider round">
                 </span>
             </label>)}
-            <p>Pt</p>
+
+            {lightOn ? (
+  <label className="switch">
+    <input
+      type="checkbox"
+      onClick={handleLight}
+      checked={lightOn} // Utilize o estado lightOn para controlar o checked
+    />
+    <span className="slider_light round"></span>
+  </label>
+) : (
+  <label className="switch">
+    <input
+      type="checkbox"
+      onClick={handleLight}
+      checked={lightOn} // O mesmo aqui, garantindo o controle dinâmico
+    />
+    <span className="slider_light round"></span>
+  </label>
+)}
+
             </footer>
             </aside>
             </>
@@ -52,7 +71,7 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
 } else {
     return(
         <>
-            <aside className='menu_open'>
+            <aside className={`menu_open ${lightOn?'light_mode': ''}`}>
             <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect="blur" />
             <p>Bruno Massuete Alves</p>
             <div className='list-buttons'>
@@ -72,7 +91,6 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
             </ul>
             </div>
             <footer>
-            <p>En</p>
             {isEnglish? (<label className='switch'>
                 <input type='checkbox' onClick={handleEnglish} checked></input>
                 <span class="slider round">
@@ -82,7 +100,27 @@ const MenuOpen = ({isMenuOpen, setmenuOpen, isEnglish, scrollToRef, handleEnglis
                 <span class="slider round">
                 </span>
             </label>)}
-            <p>Pt</p>
+
+
+            {lightOn ? (
+  <label className="switch">
+    <input
+      type="checkbox"
+      onClick={handleLight}
+      checked={lightOn} // Utilize o estado lightOn para controlar o checked
+    />
+    <span className="slider_light round"></span>
+  </label>
+) : (
+  <label className="switch">
+    <input
+      type="checkbox"
+      onClick={handleLight}
+      checked={lightOn} // O mesmo aqui, garantindo o controle dinâmico
+    />
+    <span className="slider_light round"></span>
+  </label>
+)}
             </footer>
             </aside>
             </>

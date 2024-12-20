@@ -47,6 +47,7 @@ function App() {
   const portiRef = useRef(null)
   const contactRef = useRef(null)
   const PortDetailRef = useRef(null)
+  const [lightOn, setLight] = useState(false);
 
   const [isClicked, setIsClicked] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
@@ -56,6 +57,20 @@ function App() {
   const handleEnglish = () => {
     setEnglish(!isEnglish)
     console.log(isEnglish)
+  }
+
+  const handleLight = () => {
+    setLight(!lightOn)
+    console.log(lightOn)
+    const body = document.body
+    const app_header = document.getElementsByClassName('App-header')
+    if (!lightOn){
+      body.classList.add("light_mode")
+      Array.from(app_header).forEach(el => el.classList.add("light_mode"))
+    } else{
+      body.classList.remove("light_mode")
+      Array.from(app_header).forEach(el => el.classList.remove("light_mode"))
+    }
   }
 
   const scrollToRef = (ref) => {
@@ -88,7 +103,7 @@ function App() {
     <div className="App">
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
-        <aside className='menu'>
+        <aside className={`menu ${lightOn ? 'light_mode' : ''}`}>
           <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect='blur' />
           <p>Bruno Massuete Alves</p>
           <div className='list-buttons'>
@@ -108,26 +123,30 @@ function App() {
           </ul>
         </div>
         <footer>
-          <p>En</p>
           <label className='switch'>
             <input type='checkbox' onClick={handleEnglish}></input>
             <span className="slider round">
             </span>
           </label>
-          <p>Pt</p>
+          <div style={{width: "30%"}}></div>
+          <label className='switch_light'>
+            <input type='checkbox' onClick={handleLight}></input>
+            <span className="slider_light round">
+            </span>
+          </label>
         </footer>
         </aside>
         <MenuOpen isEnglish={isEnglish} isMenuOpen={isMenuOpen} scrollToRef={scrollToRef}
         handleEnglish={handleEnglish} homeRef={homeRef} resumeRef={resumeRef} aboutRef={aboutRef}
-        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen}></MenuOpen>
+        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen} lightOn={lightOn} handleLight={handleLight}></MenuOpen>
         <div ref={homeRef}>
-          < Watch_Home isEnglish={isEnglish} roles={roles}></Watch_Home>
+          < Watch_Home isEnglish={isEnglish} roles={roles} lightOn={lightOn}></Watch_Home>
         </div>
       </header>
       <header className='App-header'>
-      <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='about' ref={aboutRef}>Sobre</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
           <p>Sou freelancer, atualmente estudando Ciência da Computação.<br></br> Estou procurando uma oportunidade para fazer parte de uma equipe e aprender mais com ela.</p>
           <div className='screen'>
             <Watch_picture />
@@ -137,17 +156,17 @@ function App() {
       </aside> 
       </header>
       <header className='App-header'>
-        <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='skill' ref={skillsRef}>Habilidades</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
             <Watch_Skill/>
           </div>
         </aside>
       </header>
       <header className='App-header'>
-        <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
           <h1 className='title_page' id="resume" ref={resumeRef}>Currículo</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
             <Watch_Ex />
             </div>
         </aside>
@@ -156,7 +175,7 @@ function App() {
         <div ref={PortDetailRef} className='fullscreen'>
         {clickedIndex !== null && <Portfolio_details index={clickedIndex} isclicked={isClicked} onButtonClicked={handleItemClick}/>}
         </div>
-        <aside className='page_port'>
+        <aside className={`page_port ${lightOn? 'light_mode':''}`}>
         <h1 className='title_page' id="port" ref={portiRef}>Portifólio</h1>
         <div className='portifolio port_to_move'>
           <Watch_Port onItemClicked={handleItemClick} />
@@ -164,9 +183,9 @@ function App() {
         </aside>
       </header>
       <header className='App-header'>
-        <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='contact' ref={contactRef}>Contato</h1>
-        <Watch_contact></Watch_contact>
+        <Watch_contact lightOn={lightOn}></Watch_contact>
         </aside>
       </header>
     </div>
@@ -178,7 +197,7 @@ function App() {
     <div className="App">
       <Menu_btn isSmallScreen={isSmallScreen} handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen}></Menu_btn>
       <header className="App-header">
-        <aside className='menu'>
+        <aside className={`menu ${lightOn ? 'light_mode' : ''}`}>
           <LazyLoadImage src={profile} className='profile_picture' alt="profile" effect='blur'/>
           <p>Bruno Massuete Alves</p>
           <div className='list-buttons'>
@@ -198,26 +217,30 @@ function App() {
           </ul>
         </div>
         <footer>
-          <p>En</p>
           <label className='switch'>
             <input type='checkbox' onClick={handleEnglish}></input>
             <span className="slider round">
             </span>
           </label>
-          <p>Pt</p>
+          <div style={{width: "30%"}}></div>
+          <label className='switch_light'>
+            <input type='checkbox' onClick={handleLight}></input>
+            <span className="slider_light round">
+            </span>
+          </label>
         </footer>
         </aside>
         <MenuOpen isEnglish={isEnglish} isMenuOpen={isMenuOpen} scrollToRef={scrollToRef}
         handleEnglish={handleEnglish} homeRef={homeRef} resumeRef={resumeRef} aboutRef={aboutRef}
-        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen}></MenuOpen>
+        portiRef={portiRef} contactRef={contactRef} setmenuOpen={setMenuOpen} lightOn={lightOn} handleLight={handleLight}></MenuOpen>
         <div ref={homeRef}>
-          < Watch_Home isEnglish={isEnglish} roles={roles_en}></Watch_Home>
+          < Watch_Home isEnglish={isEnglish} roles={roles_en} lightOn={lightOn}></Watch_Home>
         </div>
       </header>
       <header className='App-header'>
-      <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='about' ref={aboutRef}>About</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
           <p>I'm a freelancer, currently studying Computer Science.<br></br> I'm looking for an opportunity to be part of a team and learn more from it.</p>
           <div className='screen'>
             <Watch_picture />
@@ -227,17 +250,17 @@ function App() {
       </aside> 
       </header>
       <header className='App-header'>
-        <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='skill' ref={skillsRef}>Skills</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
             <Watch_Skill/>
           </div>
         </aside>
       </header>
       <header className='App-header'>
-        <aside className='page'>
+        <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
           <h1 className='title_page' id="resume" ref={resumeRef}>Resume</h1>
-          <div className='about'>
+          <div className={`about ${lightOn ? 'light_mode' : ''}`}>
             <Watch_Ex isEnglish={isEnglish} />
             </div>
         </aside>
@@ -246,7 +269,7 @@ function App() {
       <div ref={PortDetailRef} className='fullscreen'>
         {clickedIndex !== null && <Portfolio_details index={clickedIndex} isclicked={isClicked} onButtonClicked={handleItemClick}/>}
         </div>
-        <aside className='page_port'>
+        <aside className={`page_port ${lightOn? 'light_mode':''}`}>
         <h1 className='title_page' id="port" ref={portiRef}>Portfolio</h1>
         <div className='portifolio port_to_move'>
           <Watch_Port onItemClicked={handleItemClick} />
@@ -254,9 +277,9 @@ function App() {
         </aside>
       </header>
       <header className='App-header'>
-        <aside className='page'>
+      <aside className={`page ${lightOn ? 'light_mode' : ''}`}>
         <h1 className='title_page' id='contact' ref={contactRef}>Contact</h1>
-        <Watch_contact isEnglish={isEnglish}></Watch_contact>
+        <Watch_contact isEnglish={isEnglish} lightOn={lightOn}></Watch_contact>
         </aside>
       </header>
     </div>
