@@ -61,7 +61,6 @@ function App() {
 
   const handleLight = () => {
     setLight(!lightOn)
-    console.log(lightOn)
     const body = document.body
     const app_header = document.getElementsByClassName('App-header')
     if (!lightOn){

@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, lightOn} from 'react';
+import React, { useEffect, useRef} from 'react';
 import qrCode from './static/QRCODE.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-console.log(lightOn)
 
 
-
-const Watch_contact = ({isEnglish}) => {
+const Watch_contact = ({isEnglish, lightOn}) => {
   const elementsRef = useRef([]);
 
   useEffect(() => {
