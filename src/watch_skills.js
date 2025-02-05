@@ -52,14 +52,14 @@ const Watch_Skill = () => {
                   </div>
                   <div className='progress'>
                     <div className='title'>
-                      <h1>Java-Script</h1>
+                      <h1>JavaScript</h1>
                       <h1>80%</h1>
                     </div>
                     <progress className='progressbar' value="80" max="100"> 90% </progress>
                   </div>
                   <div className='progress'>
                     <div className='title'>
-                      <h1>Type-Script</h1>
+                      <h1>TypeScript</h1>
                       <h1>80%</h1>
                     </div>
                   <progress className='progressbar' value="80" max="100"> 80% </progress>
