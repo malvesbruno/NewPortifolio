@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NewPortifolio/static/css/main.5890ce64.css",
-    "main.js": "/NewPortifolio/static/js/main.392b972f.js",
+    "main.css": "/NewPortifolio/static/css/main.5d6683be.css",
+    "main.js": "/NewPortifolio/static/js/main.39db3a1b.js",
     "static/js/453.5565870f.chunk.js": "/NewPortifolio/static/js/453.5565870f.chunk.js",
     "static/media/Pull-it Train.zip": "/NewPortifolio/static/media/Pull-it Train.cbc41eb439f3e290556a.zip",
     "static/media/app-vendas.zip": "/NewPortifolio/static/media/app-vendas.6ce4021c73eb270ac944.zip",
@@ -9,6 +9,7 @@
     "static/media/flappybird.zip": "/NewPortifolio/static/media/flappybird.d4c5c1fc05b2681651ab.zip",
     "static/media/portfolio-details-5.png": "/NewPortifolio/static/media/portfolio-details-5.b9556f82931cd5c7df35.png",
     "static/media/portfolio-details-6.png": "/NewPortifolio/static/media/portfolio-details-6.edf15779e126e994d0d5.png",
+    "static/media/hero-bg-light.jpg": "/NewPortifolio/static/media/hero-bg-light.426275b1bf0d5c3f59a3.jpg",
     "static/media/portfolio-details-11.png": "/NewPortifolio/static/media/portfolio-details-11.d1eaab31a1fff7129355.png",
     "static/media/portfolio-details-2.png": "/NewPortifolio/static/media/portfolio-details-2.0f3cb92c6f10c05c0bd6.png",
     "static/media/portfolio-details-7.png": "/NewPortifolio/static/media/portfolio-details-7.aba0397ceeda27809177.png",
@@ -26,12 +27,12 @@
     "static/media/QRCODE.png": "/NewPortifolio/static/media/QRCODE.062e0a3ba256fec60f37.png",
     "static/media/profile-img.jpg": "/NewPortifolio/static/media/profile-img.6b4d762bc732e02e3178.jpg",
     "index.html": "/NewPortifolio/index.html",
-    "main.5890ce64.css.map": "/NewPortifolio/static/css/main.5890ce64.css.map",
-    "main.392b972f.js.map": "/NewPortifolio/static/js/main.392b972f.js.map",
+    "main.5d6683be.css.map": "/NewPortifolio/static/css/main.5d6683be.css.map",
+    "main.39db3a1b.js.map": "/NewPortifolio/static/js/main.39db3a1b.js.map",
     "453.5565870f.chunk.js.map": "/NewPortifolio/static/js/453.5565870f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5890ce64.css",
-    "static/js/main.392b972f.js"
+    "static/css/main.5d6683be.css",
+    "static/js/main.39db3a1b.js"
   ]
 }
