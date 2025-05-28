@@ -22,16 +22,16 @@ body::-webkit-scrollbar-thumb{
 }
 
 body.light_mode::-webkit-scrollbar{
-  background-color: #fff0ff;
+  background-color: #FAFAFA;
   width: 0.5em;
 }
 
 body.light_mode::-webkit-scrollbar-track{
-  background-color: #fff0ff;
+  background-color: #FAFAFA;
 }
 
 body.light_mode::-webkit-scrollbar-thumb{
-  background: #79aaf8;
+  background: #3B82F6;
   border-radius: 20px;
 }
 
@@ -336,7 +336,7 @@ aside.menu.light_mode{
   width: 25%;
   height: 100%;
   backdrop-filter: blur(1px);
-  background-color: #071952d7;
+  background-color: #3B82F6;
   z-index: 2;
   box-shadow: 0px 0px 10px rgba(20, 20, 51, 0.393);
 }
@@ -394,7 +394,7 @@ aside.menu > .menu-items > ul > li.hover_forced > a{
 }
 
 aside.menu.light_mode > .menu-items > ul > li.hover_forced > a{
-  color: #ffffffb8;
+  color: #ffffff;
 }
 
 aside.menu > .menu-items > ul > li.hover_forced span{
@@ -457,7 +457,7 @@ aside.menu.light_mode > div.list-buttons > button{
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color:  #79aaf846;
+  background-color:  #d5e5ff46;
   color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
@@ -486,7 +486,7 @@ aside.menu.light_mode > div.list-buttons > button:hover{
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color:  #4679cd;
+  background-color:  #dbe9ffae;
   color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
@@ -848,7 +848,7 @@ aside.page.light_mode{
   width: 75%;
   height: 110%;
   backdrop-filter: blur(5px);
-  background-color: #fff0ff;
+  background-color: #FAFAFA;
   z-index: 1;
   display: flex;
   padding: 0;
@@ -947,7 +947,7 @@ div.background{
 }
 
 div.background.light_mode{
-  background-image: url('./static/hero-bg.jpg');
+  background-image: url('./static/hero-bg-light.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -963,13 +963,17 @@ div.background.light_mode{
   justify-content: center;
   box-shadow: 0px 0px 40px #000;
   z-index: 0;
-  filter: invert(1) brightness(1) sepia(100%) hue-rotate(190deg) saturate(500%);
 }
 
 div.background > p.title{
   font-size: 2em;
   font-weight: bolder;
-  line-height: 0;
+  line-height: 1;
+  margin: 0.3em;
+  padding: 1em;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
 
@@ -979,6 +983,10 @@ div.background > p.animated{
   font-weight: 100;
   margin-top: 0em;
   text-align: left;
+  padding: 0.5em;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.212);
 }
 
 div.background > p.animated > span.roles{
@@ -989,19 +997,22 @@ div.background.light_mode > p.title{
   font-size: 2em;
   font-weight: bolder;
   line-height: 1;
-  background: rgba(255, 255, 255, 0.455);
-  filter: invert(1);
-  color: black;
+  background: #473d4b7c;
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 div.background.light_mode > p.animated{
   font-size: 1em;
   font-weight: 100;
-  background: rgba(255, 255, 255, 0.455);
-  filter: invert(1);
-  color: black;
-  margin-top: -1.3em;
+  background: #473d4b7c;
+  color: rgb(255, 255, 255);
   text-align: left;
+  padding: 0.3em;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
 div.background.light_mode > p.animated > span.roles{
@@ -1238,7 +1249,7 @@ div.about{
 
 div.about.light_mode{
   position: absolute;
-  background-color: #79aaf8a5;
+  background-color: #3B82F6;
   border-radius: 20px;
   backdrop-filter: blur(1px);
   width: 95%;
@@ -1281,7 +1292,7 @@ div.about_contact{
 
 aside.page.light_mode > div.about_contact{
   position: absolute;
-  background-color: #79aaf8a5;
+  background-color: #3B82F6;
   border-radius: 20px;
   backdrop-filter: blur(1px);
   width: 80%;
@@ -1472,17 +1483,17 @@ div.progress > progress::-webkit-progress-bar{
 }
 
 .about.light_mode  div.progress > progress::-webkit-progress-bar {
-  background-color: #ffffff;
+  background-color: #ffffff42;
   border-radius: 7px;
 }
 
 div.progress > progress::-webkit-progress-value{
-  background-color: #5f68c8bc;
+  background-color: #ffffff;
   border-radius: 7px;
 }
 
 .about.light_mode  div.progress > progress::-webkit-progress-value{
-  background-color: #79aaf8;
+  background-color: #ffffff;
   border-radius: 7px;
 }
 
@@ -1779,7 +1790,7 @@ div.portifolio {
 
 
 aside.page_port.light_mode > div.portifolio{
-  background-color: #79aaf8a5;
+  background-color: #3B82F6;
 }
 
 div.portifolio  div.item{
@@ -1797,8 +1808,9 @@ div.portifolio  div.item{
 aside.page_port.light_mode > div.portifolio > div.item{
   width: 40%;
   height: auto;
-  background-color: #071952;
+  background-color: #ffffff;
   border-radius: 20px;
+  color: #062dad;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -1993,7 +2005,7 @@ aside.page_port.light_mode > div.portifolio .type_display{
   justify-content: space-around;
   align-items: center;
   padding-block: 1em;
-  background-color: #08829548;
+  background-color: #2b05fd6f;
 }
 
 .icon_display{
@@ -2013,7 +2025,7 @@ aside.page_port.light_mode > div.portifolio .icon_display{
   justify-content: space-evenly;
   align-items: center;
   padding-block: 1em;
-  background-color: #08829548;
+  background-color: #2b05fd6f;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -2032,6 +2044,25 @@ aside.page_port.light_mode > div.portifolio .icon_display{
   align-self: center;
   border-radius: 20px;
   padding: 0.3em;
+}
+
+aside.page_port.light_mode div.portifolio div.item > a > h1{
+  color: #062dad;
+}
+
+aside.page_port.light_mode > div.portifolio div.item a button{
+  background: #a231f8b0;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    width: 40%;
+    margin: 1em;
+    height: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes come {

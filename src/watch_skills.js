@@ -66,7 +66,21 @@ const Watch_Skill = () => {
                   </div>
                   <div className='progress'>
                     <div className='title'>
+                      <h1>Git/GitHub</h1>
+                      <h1>80%</h1>
+                    </div>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
                       <h1>React.js</h1>
+                      <h1>80%</h1>
+                    </div>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>Node.js</h1>
                       <h1>80%</h1>
                     </div>
                     <progress className='progressbar' value="80" max="100"> 80% </progress>
@@ -84,6 +98,20 @@ const Watch_Skill = () => {
                       <h1>80%</h1>
                     </div>
                     <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>SQLite</h1>
+                      <h1>80%</h1>
+                    </div>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  </div>
+                  <div className='progress'>
+                    <div className='title'>
+                      <h1>Firebase</h1>
+                      <h1>75%</h1>
+                    </div>
+                    <progress className='progressbar' value="75" max="100"> 75% </progress>
                   </div>
                   <div className='progress'>
                   <div className='title'>
@@ -111,9 +139,9 @@ const Watch_Skill = () => {
                   <div className='progress'>
                     <div className='title'>
                       <h1>Security of End-Point</h1>
-                      <h1>50%</h1>
+                      <h1>70%</h1>
                     </div>
-                    <progress className='progressbar' value="50" max="100"> 50% </progress>
+                    <progress className='progressbar' value="70" max="100"> 70% </progress>
                   </div>
                   
                   <div className='progress'>
@@ -127,9 +155,9 @@ const Watch_Skill = () => {
                   <div className='progress'>
                     <div className='title'>
                       <h1>Mobile Development</h1>
-                      <h1>40%</h1>
+                      <h1>80%</h1>
                     </div>
-                    <progress className='progressbar' value="40" max="100"> 80% </progress>
+                    <progress className='progressbar' value="80" max="100"> 80% </progress>
                   </div>
               </div>
               
