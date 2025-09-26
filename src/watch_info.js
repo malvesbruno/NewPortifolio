@@ -49,7 +49,7 @@ const Watch_Info = ({isEnglish}) => {
                         <li><h1>Cidade: </h1> Guarulhos, São Paulo</li>
                       </ul>
                       <ul>
-                        <li><h1>Idade: </h1>20</li>
+                        <li><h1>Idade: </h1>21</li>
                       </ul>
                   </div>
                   <div className='pt2'>
@@ -81,7 +81,7 @@ const Watch_Info = ({isEnglish}) => {
                         <li><h1>City: </h1> Guarulhos, São Paulo</li>
                       </ul>
                       <ul>
-                        <li><h1>Age: </h1>20</li>
+                        <li><h1>Age: </h1>21</li>
                       </ul>
                   </div>
                   <div className='pt2'>
