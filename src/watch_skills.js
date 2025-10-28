@@ -55,14 +55,14 @@ const Watch_Skill = () => {
                       <h1>JavaScript</h1>
                       <h1>90%</h1>
                     </div>
-                    <progress className='progressbar' value="80" max="100"> 90% </progress>
+                    <progress className='progressbar' value="90" max="100"> 90% </progress>
                   </div>
                   <div className='progress'>
                     <div className='title'>
                       <h1>TypeScript</h1>
                       <h1>85%</h1>
                     </div>
-                  <progress className='progressbar' value="80" max="100"> 80% </progress>
+                  <progress className='progressbar' value="85" max="100"> 80% </progress>
                   </div>
                   <div className='progress'>
                     <div className='title'>
@@ -111,14 +111,14 @@ const Watch_Skill = () => {
                       <h1>Firebase</h1>
                       <h1>85%</h1>
                     </div>
-                    <progress className='progressbar' value="75" max="100"> 75% </progress>
+                    <progress className='progressbar' value="85" max="100"> 75% </progress>
                   </div>
                   <div className='progress'>
                   <div className='title'>
                       <h1>HTML</h1>
                       <h1>100%</h1>
                     </div>
-                    <progress className='progressbar' value="80" max="100"> 100% </progress>
+                    <progress className='progressbar' value="100" max="100"> 100% </progress>
                   </div>
                   <div className='progress'>
                     <div className='title'>

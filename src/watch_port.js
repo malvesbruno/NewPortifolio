@@ -2,12 +2,14 @@ import React, { useEffect, useRef } from 'react';
 
 import { useGitHubAutomatedRepos, ProjectIcons, StackIcons, StackLabels } from "github-automated-repos";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import  defaultImage  from './assets/imgs/default.png';
 
 
 
 
 const Watch_Port = ({ onItemClicked }) => {
   const elementsRef = useRef([]);
+
 
   const data = useGitHubAutomatedRepos('malvesbruno', 'portfolio')
   useEffect(() => {
@@ -53,7 +55,9 @@ const Watch_Port = ({ onItemClicked }) => {
 
               {/*Project Icons*/}
               <div className="icons">
-              <LazyLoadImage src={item.banner} className='img_port' effect='blur'></LazyLoadImage>
+              <LazyLoadImage src={item.banner ? item.banner : defaultImage} className='img_port' effect='blur' onError={(e) => {
+                e.target.src = defaultImage
+              }}></LazyLoadImage>
               <div className='type_display'>
               {item.topics.map((icon) => {
                 let names = ['art', 'artificialintelligence', 'dashboard', 'education', 'game', 'landingpage', 'personalwebsite', 'productivity', 'security', 'store']
